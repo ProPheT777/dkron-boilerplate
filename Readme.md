@@ -18,6 +18,16 @@ app_1  | ERRO[2018-06-11T21:16:51Z] invoke: Specified executor is not present   
 
 ```
 
+## Spec 
+
+* Dkron 0.10.2
+* Redis backend
+* 1 agent
+* 1 server
+
+* Job json payload are located in jobs folder
+* All architecture and conf files are located under docker dir 
+
 ## Run the sack : 
 
 * git clone blabla
@@ -26,4 +36,3 @@ app_1  | ERRO[2018-06-11T21:16:51Z] invoke: Specified executor is not present   
 * `make send-job JOB=test_on_server` This job is running from dkron server and everything is ok
 * `make send-job JOB=test_on_agent` This job is running from dkron agent embeded is application image, and not working
 
-All architecture and conf files are located under docker dir
