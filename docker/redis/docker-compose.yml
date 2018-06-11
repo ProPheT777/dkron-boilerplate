@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    redis:
+        image: redis:latest
+        volumes:
+            - 'redis:/data/'
+        command: 'redis-server'
+        ports:
+            - '6379:6379'
+        networks:
+            - redis
+        environment:
+            REDIS_PORT: '6379'
+
+networks:
+  redis:
+    driver: bridge
+
+volumes:
+    redis:
+        driver: local

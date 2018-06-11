@@ -1,0 +1,12 @@
+{
+    "name": "job_that_should_not_work",
+    "schedule": "@every 10s",
+    "concurrency": "forbid",
+    "executor": "shell",
+    "executor_config": {
+        "command": "echo 'hi'"
+    },
+    "tags": {
+        "role": "app:1"
+    }
+}

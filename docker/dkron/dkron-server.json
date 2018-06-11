@@ -1,0 +1,12 @@
+{
+    "backend": "redis",
+    "backend_machine": "redis:6379",
+    "server": true,
+    "debug": true,
+    "log-level": "debug",
+    "tags": {
+        "role": "server"
+    },
+    "keyspace": "dkron",
+    "encrypt": "TKMnjKUySK3pMFsGAaVglA=="
+}

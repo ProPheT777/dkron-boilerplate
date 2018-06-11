@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    app:
+        build: ./app_image
+        volumes:
+          - './dkron-agent.json:/etc/dkron/dkron.json'
+        command: sh -c "/opt/local/dkron/dkron agent"
+        tty: true
+        networks:
+          - dkron
+          - app
+          - redis
+        expose:
+            - 8946
+
+networks:
+    dkron:
+        external:
+          name: dkron_dkron
+    app:
+        driver: bridge
+    redis:
+        external:
+          name: redis_redis

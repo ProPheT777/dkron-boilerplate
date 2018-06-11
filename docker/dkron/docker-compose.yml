@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+    dkron:
+        image: dkron/dkron:v0.10.2
+        volumes:
+            - './dkron-server.json:/etc/dkron/dkron.json'
+        command: agent -server
+        expose:
+            - 8946
+            - 6868
+            - 8080
+        ports:
+            - 8080:8080
+        networks:
+            - dkron
+            - app
+            - redis
+
+networks:
+  dkron:
+    driver: bridge
+  redis:
+    external:
+      name: redis_redis
+  app:
+    external:
+      name: application_app
