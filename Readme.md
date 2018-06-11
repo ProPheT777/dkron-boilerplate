@@ -34,5 +34,5 @@ app_1  | ERRO[2018-06-11T21:16:51Z] invoke: Specified executor is not present   
 * `make up`
 * go to `http://127.0.0.1:8080/dashboard` for dkron admin
 * `make send-job JOB=test_on_server` This job is running from dkron server and everything is ok
-* `make send-job JOB=test_on_agent` This job is running from dkron agent embeded is application image, and not working
+* `make send-job JOB=test_on_agent` This job is running from dkron agent embeded in the application image, and not working
 
