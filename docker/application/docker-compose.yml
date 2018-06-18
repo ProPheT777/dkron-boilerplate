@@ -2,10 +2,10 @@ version: '3'
 
 services:
     app:
-        build: ./app_image
+        build: dkron/dkron:v0.10.2
         volumes:
           - './dkron-agent.json:/etc/dkron/dkron.json'
-        command: sh -c "/opt/local/dkron/dkron agent"
+        command: "agent"
         tty: true
         networks:
           - dkron
